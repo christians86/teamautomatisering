@@ -24,5 +24,19 @@ public class config {
     public static final String Twitter="Twitter";
     public static final String Facebook="Facebook";
 
+    //Models
+    public static final String modeldropdown_category="//div[@id='filter']//div[1]";
+    public static final String modeldropdown_division="//div[@id='filter']//div[2]";
+    public static final String modeldropdown_sex="//div[@id='filter']//div[3]";
+    public static final String modeldropdown_search="//input[@placeholder='Search models']";
+    public static final String more_filters="//a[contains(text(),'More filters')]";
+    public static final String secfilter_height="//div[@id='secondary-filter']//div[1]";
+    public static final String secfilter_age="//div[@id='secondary-filter']//div[2]";
+    public static final String secfilter_hair="//div[@id='secondary-filter']//div[3]";
+    public static final String secfilter_eyes="//div[@id='secondary-filter']//div[4]";
+
+
+
+
 
 }
