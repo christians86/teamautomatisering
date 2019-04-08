@@ -28,7 +28,7 @@ public class config {
 
     //Models dropdowns
     public static final String modeldropdown_category="//div[@id='filter']//div[1]";
-    public static final String modeldropdown_division="//div[@class='wrapper-dropdown ng-scope active']";
+    public static final String modeldropdown_division="//div[@id='filter']//div[2]";
     public static final String modeldropdown_sex="//div[@id='filter']//div[3]";
     public static final String modeldropdown_search="//input[@placeholder='Search models']";
     public static final String more_filters="//a[contains(text(),'More filters')]";
