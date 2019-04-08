@@ -70,6 +70,16 @@ public class models extends basepage {
     @FindBy(how = How.XPATH, using = config.division_Youngclassic)
     private WebElement division_Youngclassic;
 
+    @FindBy(how = How.XPATH, using = config.sex_all)
+    private WebElement sex_all;
+
+    @FindBy(how = How.XPATH, using = config.sex_female)
+    private WebElement sex_female;
+
+    @FindBy(how = How.XPATH, using = config.sex_male)
+    private WebElement sex_male;
+
+
 
     //Methods for dropdown
     //----------------------------------------------------------------------
@@ -82,6 +92,10 @@ public class models extends basepage {
     public void division_mainboard(){division_mainboard.click();}
     public void division_NewFaces(){division_NewFaces.click();}
     public void division_youngclassic(){division_Youngclassic.click();}
+    public void sex_all(){sex_all.click ();}
+    public void sex_female(){sex_female.click ();}
+    public void sex_male(){sex_male.click ();}
+    public void sex_dropdown(){modeldropdown_sex.click ();}
 
 
 

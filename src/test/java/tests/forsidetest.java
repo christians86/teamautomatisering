@@ -9,14 +9,14 @@ public
 class forsidetest extends basetest{
 
     @Test(priority = 1, enabled = true)
-    public void gotomodels() throws InterruptedException {
+    public void Åpne_modellsiden() throws InterruptedException {
         String testname = "Velg modeller";
         String description = "Bruker går til forside og klikker på Models";
         forside forside = new forside (driver);
         forside.modellerlink ();
     }
     @Test(priority = 2, enabled = true)
-    public void selectmodels() throws InterruptedException {
+    public void Velg_board() throws InterruptedException {
         String testname = "Velg kategori";
         String description = "Bruker går til modellsiden og setter modellkategori";
         models models = new models (driver);
@@ -24,12 +24,20 @@ class forsidetest extends basetest{
         models.modelvalue_category();
     }
     @Test(priority = 3, enabled = true)
-    public void selectdivision() throws InterruptedException {
+    public void Sett_board() throws InterruptedException {
         String testname = "Velg kategori";
         String description = "Bruker går til modellsiden og setter modellkategori";
         models models = new models (driver);
         models.clickModeldropdown_division();
         models.division_mainboard();
+    }
+    @Test(priority = 4, enabled = true)
+    public void Velg_kjønn() throws InterruptedException {
+        String testname = "Velg modeller";
+        String description = "Bruker går til forside og klikker på Models";
+        models models = new models (driver);
+        models.sex_dropdown ();
+        models.sex_female ();
     }
 
 

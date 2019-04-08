@@ -9,7 +9,7 @@ public
 class modelspage extends basetest{
 
     @Test(priority = 1, enabled = true)
-    public void Åpnemodellsiden() throws InterruptedException {
+    public void Åpne_modellsiden() throws InterruptedException {
         String testname = "Velg modeller";
         String description = "Bruker går til forside og klikker på Models";
         forside forside = new forside ( driver );
@@ -17,20 +17,27 @@ class modelspage extends basetest{
     }
 
     @Test(priority = 2, enabled = true)
-    public void Velgedivision() throws InterruptedException {
+    public void Velg_board() throws InterruptedException {
         String testname = "Velg modeller";
         String description = "Bruker går til forside og klikker på Models";
         models models = new models (driver);
         models.clickModeldropdown_division ();
     }
     @Test(priority = 3, enabled = true)
-    public void Setdivision() throws InterruptedException {
+    public void Sett_board() throws InterruptedException {
         String testname = "Velg modeller";
         String description = "Bruker går til forside og klikker på Models";
         models models = new models (driver);
         models.division_mainboard ();
     }
-
+    @Test(priority = 4, enabled = true)
+    public void Velg_kjønn() throws InterruptedException {
+        String testname = "Velg modeller";
+        String description = "Bruker går til forside og klikker på Models";
+        models models = new models (driver);
+        models.sex_dropdown ();
+        models.sex_female ();
+    }
 
 
 }

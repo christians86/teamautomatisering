@@ -50,9 +50,9 @@ public class config {
 
 
     //Dropdownvalues - sex
-    public static final String sex_all="//div[@class='wrapper-dropdown ng-scope active']//li[@class='ng-binding ng-scope'][contains(text(),'All')]";
-    public static final String sex_male="//div[@class='wrapper-dropdown ng-scope active']//li[@class='ng-binding ng-scope'][contains(text(),'Male')]";
-    public static final String sex_female="//div[@class='wrapper-dropdown ng-scope active']//li[@class='ng-binding ng-scope'][contains(text(),'Female')]";
+    public static final String sex_all="//li[@class='ng-binding ng-scope'][contains(text(),'All')]";
+    public static final String sex_male="li[@class='ng-binding ng-scope'][contains(text(),'Male')]";
+    public static final String sex_female="//li[@class='ng-binding ng-scope'][contains(text(),'Female')]";
 
 
 
