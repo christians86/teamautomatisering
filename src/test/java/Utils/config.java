@@ -14,10 +14,10 @@ public class config {
     public static final String sub_reklame="menu-item-44757";
     public static final String sub_blimodell="menu-item-44758";
     public static final String visallemodeller="to-filter";
-    public static final String bilde_image="Image";
-    public static final String bilde_newface="New face";
-    public static final String bilde_development="Development";
-    public static final String bilde_mainboard="Mainboard";
+    public static final String bilde_image="//a[contains(text(),'Image')]";
+    public static final String bilde_newface="//a[contains(text(),'New Face')]";
+    public static final String bilde_development="//a[contains(text(),'Development')]";
+    public static final String bilde_mainboard="//a[contains(text(),'Mainboard')]";
 
     //About
     public static final String Instagram="Instagram";
