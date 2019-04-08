@@ -8,14 +8,14 @@ import pages.models;
 public
 class forsidetest extends basetest{
 
-    @Test(priority = 0, enabled = true)
+    @Test(priority = 1, enabled = true)
     public void gotomodels() throws InterruptedException {
         String testname = "Velg modeller";
         String description = "Bruker går til forside og klikker på Models";
         forside forside = new forside (driver);
         forside.modellerlink ();
     }
-    @Test(priority = 0, enabled = true)
+    @Test(priority = 2, enabled = true)
     public void selectmodels() throws InterruptedException {
         String testname = "Velg kategori";
         String description = "Bruker går til modellsiden og setter modellkategori";
@@ -23,7 +23,7 @@ class forsidetest extends basetest{
         models.clickModeldropdown_category();
         models.modelvalue_category();
     }
-    @Test(priority = 0, enabled = true)
+    @Test(priority = 3, enabled = true)
     public void selectdivision() throws InterruptedException {
         String testname = "Velg kategori";
         String description = "Bruker går til modellsiden og setter modellkategori";
