@@ -1,7 +1,5 @@
 package Utils;
 
-import java.security.PublicKey;
-
 public class config {
 
     //Fellesinfo
@@ -53,6 +51,7 @@ public class config {
     public static final String sex_all="//li[@class='ng-binding ng-scope'][contains(text(),'All')]";
     public static final String sex_male="li[@class='ng-binding ng-scope'][contains(text(),'Male')]";
     public static final String sex_female="//li[@class='ng-binding ng-scope'][contains(text(),'Female')]";
+
 
 
 
