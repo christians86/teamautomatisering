@@ -39,5 +39,4 @@ class modelspage extends basetest{
         models.sex_female ();
     }
 
-
 }

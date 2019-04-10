@@ -83,19 +83,19 @@ public class models extends basepage {
 
     //Methods for dropdown
     //----------------------------------------------------------------------
-    public void clickModeldropdown_category(){modeldropdown_category.click();}
-    public void clickModeldropdown_division(){modeldropdown_division.click();}
-    public void modelvalue_category(){category_model.click();}
-    public void divisionvalue_all(){division_all.click();}
-    public void divisionvalue_Development(){division_Development.click();}
-    public void divisionvalue_Image(){division_Image.click();}
-    public void division_mainboard(){division_mainboard.click();}
-    public void division_NewFaces(){division_NewFaces.click();}
-    public void division_youngclassic(){division_Youngclassic.click();}
-    public void sex_all(){sex_all.click ();}
-    public void sex_female(){sex_female.click ();}
-    public void sex_male(){sex_male.click ();}
-    public void sex_dropdown(){modeldropdown_sex.click ();}
+    public void clickModeldropdown_category(){clickElement ( modeldropdown_category );}
+    public void clickModeldropdown_division(){clickElement ( modeldropdown_category );}
+    public void modelvalue_category(){clickElement ( category_model );}
+    public void divisionvalue_all(){clickElement ( division_all );}
+    public void divisionvalue_Development(){clickElement ( division_Development );}
+    public void divisionvalue_Image(){clickElement ( division_Development );}
+    public void division_mainboard(){clickElement ( division_mainboard );}
+    public void division_NewFaces(){clickElement ( division_NewFaces );}
+    public void division_youngclassic(){clickElement ( division_Youngclassic );}
+    public void sex_all(){clickElement ( sex_all );}
+    public void sex_female(){clickElement ( sex_female );}
+    public void sex_male(){clickElement ( sex_male );}
+    public void sex_dropdown(){clickElement ( modeldropdown_sex );}
 
 
 

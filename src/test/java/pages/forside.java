@@ -52,13 +52,13 @@ public class forside extends basepage{
 
     //Methods for bruk på forsiden
     //----------------------------------------------------------------------
-    public void modellerlink() {models.click (); }
+    public void modellerlink() {clickElement (models); }
 
-    public void sociallink() {social.click ();}
+    public void sociallink() {clickElement (models);}
 
-    public void selectionlink() {selection.click ();}
+    public void selectionlink() {clickElement (selection);}
 
-    public void morelink() {more.click ();}
+    public void morelink() {clickElement (more);}
 
     public void submeny_aboutlink(){
         synlighet_element ( sub_about );
@@ -72,15 +72,15 @@ public class forside extends basepage{
         synlighet_element ( sub_blimodell );
         sub_blimodell.click (); }
 
-    public void visallemodellerlink(){ visallemodeller.click (); }
+    public void visallemodellerlink(){ clickElement (visallemodeller); }
 
-    public void bilde_imagelink() {bilde_image.click ();}
+    public void bilde_imagelink() {clickElement (bilde_image);}
 
-    public void Bilde_newfacelink()  {bilde_newface.click ();}
+    public void Bilde_newfacelink()  {clickElement (bilde_newface);}
 
-    public void Bilde_developmentlink() {bilde_development.click ();}
+    public void Bilde_developmentlink() {clickElement (bilde_development);}
 
-    public void Bilde_mainboardlink() {bilde_mainboard.click ();}
+    public void Bilde_mainboardlink() {clickElement (bilde_mainboard);}
 
 
 
