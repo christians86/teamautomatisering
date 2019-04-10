@@ -53,6 +53,12 @@ public class config {
     public static final String sex_female="//li[@class='ng-binding ng-scope'][contains(text(),'Female')]";
 
 
+    //List of models - variables
+    public static final String mainboard_female="//div[@class='sw-12 left model-list-wrap ng-scope']";
+    public static final String mainboard_byttside="//dir-pagination-controls[@class='ng-scope ng-isolate-scope']";
+    public static final String mainboard_male="//div[@class='sw-12 left model-list-wrap ng-scope']";
+
+
 
 
 

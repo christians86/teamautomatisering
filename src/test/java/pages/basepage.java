@@ -22,14 +22,6 @@ public class basepage {
     //*********Web Elements********************************************************
     //*********Page Methods********************************************************
 
-    void synlighet_element(WebElement element){
-        try{
-            wait.until(ExpectedConditions.visibilityOf(element));
-            wait.until(ExpectedConditions.elementToBeClickable(element));
-            element.click();
-        }catch (WebDriverException w){
-        }
-    }
     //isControlVisible
     void waitElementVisible(WebElement element){
         try {
@@ -37,18 +29,30 @@ public class basepage {
         }catch (WebDriverException w){}
     }
 
-    void clickElement(WebElement element){
-        try{
-            wait.until(ExpectedConditions.visibilityOf(element));
-            wait.until(ExpectedConditions.elementToBeClickable(element));
-            JavascriptExecutor executor = (JavascriptExecutor) driver;
-            executor.executeScript("arguments[0].scrollIntoView(true);", element);
-            element.click();
-        }catch (WebDriverException w){
+    void clickElement(WebElement element) {
+        try {
+            wait.until ( ExpectedConditions.visibilityOf ( element ) );
+            wait.until ( ExpectedConditions.elementToBeClickable ( element ) );
+            element.click ();
+        } catch (WebDriverException w) {
             //ExceptionUtils.getStackTrace(e)
-            System.out.println("Test feilet");
+            System.out.println ( "Test feilet" );
         }
     }
+
+        void clickElementwithscroll(WebElement element) {
+            try {
+                wait.until ( ExpectedConditions.visibilityOf ( element ) );
+                wait.until ( ExpectedConditions.elementToBeClickable ( element ) );
+                JavascriptExecutor executor = ( JavascriptExecutor ) driver;
+                executor.executeScript ( "arguments[0].scrollIntoView(true);", element );
+                element.click ();
+            } catch (WebDriverException w) {
+                //ExceptionUtils.getStackTrace(e)
+                System.out.println ( "Test feilet" );
+            }
+        }
+
 
     //Click
     //Sendkey

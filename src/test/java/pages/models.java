@@ -44,7 +44,7 @@ public class models extends basepage {
     @FindBy (how = How.XPATH, using = config.secfilter_height)
     private WebElement secfilter_height;
 
-    //Elementer dropdown valg
+    //Elementer dropdown values
     //----------------------------------------------------------------------
     @FindBy(how = How.XPATH, using = config.category_model)
     private WebElement category_model;
@@ -80,11 +80,22 @@ public class models extends basepage {
     private WebElement sex_male;
 
 
+    //Elementer modellvalg
+    //----------------------------------------------------------------------
+    @FindBy(how = How.XPATH, using = config.mainboard_female)
+    private WebElement mainboard_female;
+
+    @FindBy(how = How.XPATH, using = config.mainboard_byttside)
+    private WebElement mainboard_byttside;
+
+    @FindBy(how = How.XPATH, using = config.mainboard_male)
+    private WebElement mainboard_male;
+
 
     //Methods for dropdown
     //----------------------------------------------------------------------
     public void clickModeldropdown_category(){clickElement ( modeldropdown_category );}
-    public void clickModeldropdown_division(){clickElement ( modeldropdown_category );}
+    public void clickModeldropdown_division(){clickElement ( modeldropdown_division );}
     public void modelvalue_category(){clickElement ( category_model );}
     public void divisionvalue_all(){clickElement ( division_all );}
     public void divisionvalue_Development(){clickElement ( division_Development );}
@@ -96,7 +107,6 @@ public class models extends basepage {
     public void sex_female(){clickElement ( sex_female );}
     public void sex_male(){clickElement ( sex_male );}
     public void sex_dropdown(){clickElement ( modeldropdown_sex );}
-
 
 
     //Methods for valg av modeller

@@ -52,24 +52,24 @@ public class forside extends basepage{
 
     //Methods for bruk på forsiden
     //----------------------------------------------------------------------
-    public void modellerlink() {clickElement (models); }
+    public void modellerlink() {models.click (); }
 
-    public void sociallink() {clickElement (models);}
+    public void sociallink() {social.click ();}
 
     public void selectionlink() {clickElement (selection);}
 
     public void morelink() {clickElement (more);}
 
     public void submeny_aboutlink(){
-        synlighet_element ( sub_about );
+        clickElement ( sub_about );
         sub_about.click (); }
 
     public void submeny_reklamelink(){
-        synlighet_element ( sub_reklame );
+        clickElement ( sub_reklame );
         sub_reklame.click (); }
 
     public void submeny_blimodelllink(){
-        synlighet_element ( sub_blimodell );
+        clickElement ( sub_blimodell );
         sub_blimodell.click (); }
 
     public void visallemodellerlink(){ clickElement (visallemodeller); }
