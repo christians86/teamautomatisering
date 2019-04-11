@@ -111,6 +111,18 @@ public class models extends basepage {
 
     //Methods for valg av modeller
     //----------------------------------------------------------------------
+    public void velgmodell(String navn){
+        try {
+            if (navn.equals (  ))
+
+
+
+        }
+
+
+        }
+
+    }
 
 
 
