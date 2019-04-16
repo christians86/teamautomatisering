@@ -37,6 +37,7 @@ class modelspage extends basetest{
         models models = new models (driver);
         models.sex_dropdown ();
         models.sex_female ();
+        models.velgmodell("Maria");
     }
 
 }

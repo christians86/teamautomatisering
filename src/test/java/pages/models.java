@@ -2,11 +2,13 @@ package pages;
 
 import Utils.config;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.SkipException;
 
 public class models extends basepage {
     public models ( WebDriver driver) {
@@ -113,17 +115,37 @@ public class models extends basepage {
     //----------------------------------------------------------------------
     public void velgmodell(String navn){
         try {
-            if (navn.equals (  ))
+            if (navn.equals("Sinnslidelse")) {
+                clickElement(checkBoxSinnslidelse);
+            }
+            if (navn.equals("Demens")) {
+                clickElement(checkBoxDemens);
+            }
+            if (navn.equals("PsykiskUtviklingshemming")) {
+                clickElement(checkBoxPsykiskUtviklingshemming);
+            }
+            if (navn.equals("Rusmiddelmisbruk")) {
+                clickElement(checkBoxRusmiddelmisbruk);
+            }
+            if (navn.equals("AlvorligSpilleavhenginghet")) {
+                clickElement(checkBoxAlvorligSpilleavhenginghet);
+            }
+            if (navn.equals("AlvorligSvekketHelbred")) {
+                clickElement(checkBoxAlvorligSvekketHelbred);
+            }
+            if (navn.equals("Annet")) {
+                clickElement(checkBoxAnnet);
+            }
 
-
-
-        }
-
-
+        } catch (WebDriverException ex) {
+            throw new SkipException("Skipping this test");
         }
 
     }
 
-
+String listeNavn = ["Maria","Pål","Arne-Bjarne"];
+    for(i=0;i<len(listeNavn);i++) {
+        velgModell(i);
+    }
 
 }
