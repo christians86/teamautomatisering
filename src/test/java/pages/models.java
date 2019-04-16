@@ -93,6 +93,12 @@ public class models extends basepage {
     @FindBy(how = How.XPATH, using = config.mainboard_male)
     private WebElement mainboard_male;
 
+    @FindBy(how = How.ID_OR_NAME, using = config.addto_selection)
+    private WebElement leggtil;
+
+    @FindBy (how = How.CLASS_NAME, using = config.modell_bilde)
+    private WebElement modellbilde;
+
 
     //Methods for dropdown
     //----------------------------------------------------------------------
@@ -114,38 +120,11 @@ public class models extends basepage {
     //Methods for valg av modeller
     //----------------------------------------------------------------------
     public void velgmodell(String navn){
-        try {
-            if (navn.equals("Sinnslidelse")) {
-                clickElement(checkBoxSinnslidelse);
-            }
-            if (navn.equals("Demens")) {
-                clickElement(checkBoxDemens);
-            }
-            if (navn.equals("PsykiskUtviklingshemming")) {
-                clickElement(checkBoxPsykiskUtviklingshemming);
-            }
-            if (navn.equals("Rusmiddelmisbruk")) {
-                clickElement(checkBoxRusmiddelmisbruk);
-            }
-            if (navn.equals("AlvorligSpilleavhenginghet")) {
-                clickElement(checkBoxAlvorligSpilleavhenginghet);
-            }
-            if (navn.equals("AlvorligSvekketHelbred")) {
-                clickElement(checkBoxAlvorligSvekketHelbred);
-            }
-            if (navn.equals("Annet")) {
-                clickElement(checkBoxAnnet);
-            }
-
-        } catch (WebDriverException ex) {
-            throw new SkipException("Skipping this test");
-        }
-
+        clickElement ( modellbilde );
     }
 
-String listeNavn = ["Maria","Pål","Arne-Bjarne"];
-    for(i=0;i<len(listeNavn);i++) {
-        velgModell(i);
-    }
+
+
+
 
 }

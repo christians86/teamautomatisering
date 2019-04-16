@@ -6,8 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class about extends basepage{
-    public about ( WebDriver driver ) { super ( driver ); }
+public class about extends basepage{ public about ( WebDriver driver ) { super ( driver ); }
 
     //Webelementer
     //---------------------------------------------------------------

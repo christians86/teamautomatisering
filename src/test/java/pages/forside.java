@@ -9,8 +9,7 @@ import org.openqa.selenium.support.How;
 
 public class forside extends basepage{
 
-    public forside ( WebDriver driver) {
-        super(driver); }
+    public forside ( WebDriver driver) { super(driver); }
 
     //Elementer på forsiden til bruk
     //----------------------------------------------------------------------
@@ -38,17 +37,20 @@ public class forside extends basepage{
     @FindBy (how = How.ID, using = config.visallemodeller)
     private WebElement visallemodeller;
 
-    @FindBy (how = How.ID, using = config.bilde_image)
-    private WebElement bilde_image;
+    @FindBy (how = How.ID, using = config.bildelink_image)
+    private WebElement bildelink_image;
 
-    @FindBy (how = How.ID, using = config.bilde_newface)
-    private WebElement bilde_newface;
+    @FindBy (how = How.ID, using = config.bildelink_newface)
+    private WebElement bildelink_newface;
 
-    @FindBy (how = How.ID, using = config.bilde_development)
-    private WebElement bilde_development;
+    @FindBy (how = How.ID, using = config.bildelink_development)
+    private WebElement bildelink_development;
 
-    @FindBy (how = How.ID, using = config.bilde_mainboard)
-    private WebElement bilde_mainboard;
+    @FindBy (how = How.ID, using = config.bildelink_mainboard)
+    private WebElement bildelink_mainboard;
+
+    @FindBy (how = How.ID, using = config.modellsearch_forside)
+    private WebElement modellsearch_link;
 
     //Methods for bruk på forsiden
     //----------------------------------------------------------------------
@@ -58,30 +60,30 @@ public class forside extends basepage{
 
     public void selectionlink() {clickElement (selection);}
 
-    public void morelink() {clickElement (more);}
-
-    public void submeny_aboutlink(){
-        clickElement ( sub_about );
-        sub_about.click (); }
-
-    public void submeny_reklamelink(){
-        clickElement ( sub_reklame );
-        sub_reklame.click (); }
-
-    public void submeny_blimodelllink(){
-        clickElement ( sub_blimodell );
-        sub_blimodell.click (); }
-
     public void visallemodellerlink(){ clickElement (visallemodeller); }
 
-    public void bilde_imagelink() {clickElement (bilde_image);}
+    public void bildelink_imagelink() {clickElement (bildelink_image);}
 
-    public void Bilde_newfacelink()  {clickElement (bilde_newface);}
+    public void bildelink_newfacelink()  {clickElement (bildelink_newface);}
 
-    public void Bilde_developmentlink() {clickElement (bilde_development);}
+    public void bildelink_developmentlink() {clickElement (bildelink_development);}
 
-    public void Bilde_mainboardlink() {clickElement (bilde_mainboard);}
+    public void bildelink_mainboardlink() {clickElement (bildelink_mainboard);}
 
+    public void modellsearch_link() {clickElement (modellsearch_link);}
+
+    public void submeny (String menyvalg){
+        more.click ();
+        if (menyvalg.equals ("Bli modell")){
+        clickElement ( sub_blimodell );
+        }
+        if (menyvalg.equals ("About")){
+            clickElement ( sub_about );
+        }
+        if (menyvalg.equals ("Reklame")){
+            clickElement ( sub_reklame );
+        }
+    }
 
 
 
