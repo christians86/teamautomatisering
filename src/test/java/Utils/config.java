@@ -30,8 +30,8 @@ public class config {
     public static final String alder="input_1_11";
 
     //Models controllers
-    public static final String addto_selection="//div[@class='model-filter sw-12 pb-2']//div[1]//a[2]";
-    public static final String modell_bilde="clear-underline inner-brick ng-binding";
+    public static final String addto_selection="Add model to Selections";
+    public static final String modell_bilde="//div[@id='model47931']//a[1]";
 
     //Models dropdowns
     public static final String modeldropdown_category="//div[@id='filter']//div[1]";

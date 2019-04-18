@@ -1,13 +1,11 @@
 package pages;
 
 
-import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.SkipException;
 
 public class basepage {
     public final WebDriver driver;
@@ -24,12 +22,11 @@ public class basepage {
     //*********Web Elements********************************************************
     //*********Page Methods********************************************************
 
-    //isControlVisible
     void waitElementVisible ( WebElement element ) {
         try {
             wait.until ( ExpectedConditions.visibilityOf ( element ) );
-        } catch (WebDriverException w) {
-            System.out.println ( " Wait element Test feilet" );
+        } catch (WebDriverException stacktrace) {
+            System.out.println ( " Wait element Test feilet" + stacktrace );
 
         }
     }
@@ -37,11 +34,11 @@ public class basepage {
     void clickElement ( WebElement element ) {
         try {
             wait.until ( ExpectedConditions.visibilityOf ( element ) );
-            wait.until ( ExpectedConditions.elementToBeClickable ( element ) );
+            //wait.until ( ExpectedConditions.elementToBeClickable ( element ) );
             element.click ();
-        } catch (WebDriverException w) {
+        } catch (WebDriverException stacktrace) {
             //ExceptionUtils.getStackTrace(e)
-            System.out.println ( "Click element Test feilet" );
+            System.out.println ( "Click element Test feilet" + stacktrace);
         }
     }
 
@@ -50,11 +47,11 @@ public class basepage {
             wait.until ( ExpectedConditions.visibilityOf ( element ) );
             wait.until ( ExpectedConditions.elementToBeClickable ( element ) );
             JavascriptExecutor executor = ( JavascriptExecutor ) driver;
-            executor.executeScript ( "arguments[0].scrollIntoView(true);", element );
+            executor.executeScript("arguments[0].scrollIntoView(true);", element);
             element.click ();
-        } catch (WebDriverException w) {
+        } catch (WebDriverException stacktrace) {
             //ExceptionUtils.getStackTrace(e)
-            System.out.println ( "Test feilet" );
+            System.out.println ( "clickElementwithscroll feilet" + stacktrace );
         }
 
     }
@@ -63,9 +60,9 @@ public class basepage {
         try {
             element.click ();
             element.sendKeys ( text );
-        } catch (WebDriverException w) {
+        } catch (WebDriverException stacktrace) {
             //ExceptionUtils.getStackTrace(e)
-            System.out.println ( "Send keys Test feilet" );
+            System.out.println ( "Send keys Test feilet"+stacktrace);
         }
     }
 
@@ -73,14 +70,14 @@ public class basepage {
         try {
             Actions action = new Actions(driver);
             action.moveToElement(element).build().perform();
-        } catch (WebDriverException w) {
+        } catch (WebDriverException stacktrace) {
             //ExceptionUtils.getStackTrace(e)
-            System.out.println ( "Mouseover feilet" );
+            System.out.println ( "Mouseover feilet" + stacktrace );
         }
     }
-
-
-
+    void navigateback(){
+        driver.navigate ().back ();
+    }
 }
 
 

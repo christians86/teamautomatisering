@@ -1,11 +1,12 @@
 package tests;
 
+
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import pages.forside;
 import pages.joinus;
 import pages.models;
 
-import static Utils.config.sub_about;
 
 public class Debugtestcase extends basetest{
 
@@ -16,7 +17,9 @@ public class Debugtestcase extends basetest{
         forside forside = new forside (driver);
         joinus join = new joinus (driver);
         models modell = new models ( driver );
-        forside.submeny ("About");
+        forside.modellerlink ();
+        modell.selectfemale ( "Paulina E" );
+        modell.add ();
 
     }
 
