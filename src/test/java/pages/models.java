@@ -95,36 +95,6 @@ public class models extends basepage {
     @FindBy(how = How.XPATH, using = config.mainboard_male)
     private WebElement mainboard_male;
 
-    //Elementer modellvalg
-    //----------------------------------------------------------------------
-    @FindBy(how = How.ID, using = confignames.Gustaw)
-    private WebElement male_gustaw;
-    @FindBy(how = How.ID, using = confignames.Fransisco)
-    private WebElement male_Fransisco;
-    @FindBy(how = How.ID, using = confignames.HaavardK)
-    private WebElement male_HaavardK;
-    @FindBy(how = How.ID, using = confignames.Jennu)
-    private WebElement male_Jennu;
-    @FindBy(how = How.ID, using = confignames.NikolaiD)
-    private WebElement male_NikolaiD;
-
-    @FindBy(how = How.ID, using = confignames.IrisL)
-    private WebElement female_IrisL;
-    @FindBy(how = How.ID, using = confignames.PaulinaE)
-    private WebElement female_PaulinaE;
-    @FindBy(how = How.ID, using = confignames.SophiaL)
-    private WebElement female_SophiaL;
-    @FindBy(how = How.ID, using = confignames.TineF)
-    private WebElement female_TineF;
-    @FindBy(how = How.ID, using = confignames.VictoriaM)
-    private WebElement female_VictoriaM;
-
-    @FindBy(how = How.ID_OR_NAME, using = config.addto_selection)
-    private WebElement leggtil;
-
-    @FindBy(how = How.CLASS_NAME, using = config.modell_bilde)
-    private WebElement modellbilde;
-
     //Methods for dropdown
     //----------------------------------------------------------------------
     public
@@ -192,11 +162,36 @@ public class models extends basepage {
         clickElement ( modeldropdown_sex );
     }
 
+    //Elementer modellvalg
+    //----------------------------------------------------------------------
+    @FindBy(how = How.ID, using = confignames.Gustaw)
+    private WebElement male_gustaw;
+    @FindBy(how = How.ID, using = confignames.Fransisco)
+    private WebElement male_Fransisco;
+    @FindBy(how = How.ID, using = confignames.HaavardK)
+    private WebElement male_HaavardK;
+    @FindBy(how = How.ID, using = confignames.Jennu)
+    private WebElement male_Jennu;
+    @FindBy(how = How.ID, using = confignames.NikolaiD)
+    private WebElement male_NikolaiD;
+    @FindBy(how = How.ID, using = confignames.IrisL)
+    private WebElement female_IrisL;
+    @FindBy(how = How.ID, using = confignames.PaulinaE)
+    private WebElement female_PaulinaE;
+    @FindBy(how = How.ID, using = confignames.SophiaL)
+    private WebElement female_SophiaL;
+    @FindBy(how = How.ID, using = confignames.TineF)
+    private WebElement female_TineF;
+    @FindBy(how = How.ID, using = confignames.VictoriaM)
+    private WebElement female_VictoriaM;
+    @FindBy(how = How.ID_OR_NAME, using = config.addto_selection)
+    private WebElement leggtil;
+    @FindBy(how = How.CLASS_NAME, using = config.modell_bilde)
+    private WebElement modellbilde;
 
     //Methods for valg av modeller
     //----------------------------------------------------------------------
-    public
-    void selectmale ( String text ) {
+    public void selectmale ( String text ) {
         try {
             if (text.contains ( "Gustaw" )) {
                 clickElement ( male_gustaw );
@@ -236,8 +231,7 @@ public class models extends basepage {
         try {
             if (text.contains ( "Iris L" )) {
                 clickElementwithscroll ( female_IrisL );
-                clickElement ( leggtil );
-                navigateback ();
+
 
             }
             if (text.contains ( "Paulina E" )) {
@@ -246,20 +240,17 @@ public class models extends basepage {
             }
             if (text.contains ( "Sophia L." )) {
                 clickElementwithscroll ( female_SophiaL );
-                clickElement ( leggtil );
-                navigateback ();
+
 
             }
             if (text.contains ( "Tine F" )) {
                 clickElementwithscroll ( female_TineF );
-                clickElement ( leggtil );
-                navigateback ();
+
 
             }
             if (text.contains ( "Victoria M" )) {
                 clickElementwithscroll ( female_VictoriaM );
-                clickElement ( leggtil );
-                navigateback ();
+
 
             }
         } catch (WebDriverException stacktrace) {
@@ -268,6 +259,7 @@ public class models extends basepage {
         }
     }
         public void add(){
+            navigaterefresh ();
             mouseover ( leggtil );
             leggtil.click ();
         }

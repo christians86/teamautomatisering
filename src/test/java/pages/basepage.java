@@ -11,8 +11,7 @@ public class basepage {
     public final WebDriver driver;
     public final WebDriverWait wait;
 
-    public
-    basepage ( WebDriver driver ) {
+    public basepage ( WebDriver driver ) {
         this.driver = driver;
         PageFactory.initElements ( driver, this );
         wait = new WebDriverWait ( driver, 15 );
@@ -77,6 +76,9 @@ public class basepage {
     }
     void navigateback(){
         driver.navigate ().back ();
+    }
+    void navigaterefresh(){
+        driver.navigate ().refresh ();
     }
 }
 
